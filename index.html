@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            color:#9CA0A4;
+            font-family: 'Noto Sans TC', sans-serif;
+            position: relative;
+            /* background: #000 !important;
+            color: #0f0 !important;
+            outline: solid #f00 1px !important; */
+        }
+        
+
+        @media screen and (max-width: 768px) {
+            .leaf_1, .leaf_2, .leaf_3{
+                display: none;
+            }
+
+            #nav.padding{
+                padding: 0 !important;
+            }
+
+            .banner{
+                flex-direction: column;
+                height: 400px !important;
+            }
+            
+            .img_wrap{
+                width: 700px;
+            }
+            
+    
+            #wrap_logo_slogen{
+                display: none !important;
+            }
+
+            /* .leafbg{
+                background: url(./img/bg-leaf.png) no-repeat center;
+                
+                
+            } */
+
+            #product_wrap{
+                margin: 3rem 0 !important;
+            }
+
+
+
+            #aboutUsTextRow{
+                
+                margin: 0 !important;
+                height: 100% !important;
+            }
+            #aboutUsText{
+                font-size: 0.5rem;
+                margin: 0 !important;
+                height: 200px !important;
+                
+                
+            }
+            #aboutUsImg{
+                position: relative ! important;
+                margin-bottom: 10px;
+                order:-1;
+            }
+
+
+
+            .leaf_4, .leaf_5{
+                display: none;
+            }
+            #quoteSpace{
+                margin: 10px !important;
+            }
+            #quote_wrap{
+                transform: scale(300px,300px)!important;
+                flex-direction: column !important;
+                position: relative !important;
+            }
+            .quote{
+                direction: row !important;
+                height: 150px !important;
+                width: 150px !important;
+                border: 1px solid #9CA0A4 !important;
+                border-radius: 50%!important;
+                color: #9CA0A4 !important;
+                margin: 10px 0 !important;
+                
+            }
+
+            .quote h1,h5{
+                font-size: 10px !important;
+            }
+            
+            .quote p{
+                font-size: 10px !important;
+                color: #9CA0A4 !important;
+            }
+            #quoteBackground{
+                display: none !important;
+            }
+
+            .leaf_7, .leaf_8,.leaf_9,.leaf_10,.leaf_11,.leaf_12{
+                display: none !important;
+            }
+
+            #fruit{
+                flex-direction: column !important;
+                margin: 20px !important;
+            }
+            
+            .fruit_text{
+                height: 100px !important;
+            }
+           .fruit_img{
+                padding: 0 !important;
+           }
+           #pineapple_text{
+               order:1;
+           }
+           #passion_text{
+               order:1;
+           }
+
+
+           #footerSpace{
+               height: 0 !important;
+           }
+
+           .footer_row{
+               padding: 20px 0 100px 0!important;
+           }
+           .footer_row p{
+               font-size: 12px !important;
+               line-height: normal !important;
+               padding-top: 10px !important;
+           }
+        }
+        
+
+        
+        .fixedCircle{
+            height: 100px;
+            width: 100px;
+            background-color: #488E44;
+            border-radius: 50%;
+        }
+        /* header區 */
+        .leaf_1{
+            -moz-transform:rotate(-50deg);
+            -webkit-transform:rotate(-50deg);
+            -o-transform:rotate(-50deg);
+            -ms-transform:rotate(-50deg);
+            transform:rotate(-50deg);
+            transition: 0.5s;
+        }
+        .leaf_1.animation{
+            -moz-transform:rotate(-51deg);
+            -webkit-transform:rotate(-51deg);
+            -o-transform:rotate(-51deg);
+            -ms-transform:rotate(-51deg);
+            transform:rotate(-51deg);
+        }
+        .leaf_2{
+            -moz-transform:rotate(-10deg);
+            -webkit-transform:rotate(-10deg);
+            -o-transform:rotate(-10deg);
+            -ms-transform:rotate(-10deg);
+            transform:rotate(-10deg);
+            transition: 1s;
+        }
+        .leaf_2.animationRight{
+            -moz-transform:rotate(-11deg);
+            -webkit-transform:rotate(-11deg);
+            -o-transform:rotate(-11deg);
+            -ms-transform:rotate(-11deg);
+            transform:rotate(-11deg);
+        }
+        .leaf_2.animationLeft{
+            -moz-transform:rotate(-9deg);
+            -webkit-transform:rotate(-9deg);
+            -o-transform:rotate(-9deg);
+            -ms-transform:rotate(-9deg);
+            transform:rotate(-9deg);
+        }
+        .leaf_3{
+            -moz-transform:rotate(-25deg);
+            -webkit-transform:rotate(-25deg);
+            -o-transform:rotate(-25deg);
+            -ms-transform:rotate(-25deg);
+            transform:rotate(-25deg);
+            transform:rotate(-25deg);
+            transition:1s;
+        }
+        .leaf_3.animationRight{
+            -moz-transform:rotate(-26deg);
+            -webkit-transform:rotate(-26deg);
+            -o-transform:rotate(-26deg);
+            -ms-transform:rotate(-26deg);
+            transform:rotate(-26deg);
+            transform:rotate(-26deg);
+        }
+        .leaf_3.animationLeft{
+            -moz-transform:rotate(-24deg);
+            -webkit-transform:rotate(-24deg);
+            -o-transform:rotate(-24deg);
+            -ms-transform:rotate(-24deg);
+            transform:rotate(-24deg);
+            transform:rotate(-24deg);
+        }
+
+        .nav{
+            transition: .5s;
+        }
+        .nav.hide{
+            transform: translateY(-80px);
+        }
+        .navbar-toggler {
+            border: 0px solid transparent;
+        }
+        button:focus {
+            outline:none;
+            
+        }
+
+
+        /* banner */
+        .img_wrap img{
+            transition: 0.5s;
+        }
+
+
+        /* 人氣商品區 */
+        .leafbg{
+           
+            background: url(./img/bg-leaf.png) no-repeat center;
+            background-size: contain;
+            
+        }
+
+        .product_img{
+            transition: .5s;
+        }
+
+         /* 關於我們 */
+         #aboutUsText{
+             opacity: 0;
+             transition: 1s;
+             transform: translateY(100px);
+         }
+         #aboutUsText.animation{
+            transform: translateY(0px);
+         }
+         #aboutUsImg{
+             opacity: 0;
+             transition: 1s;
+             transform: translateY(100px);
+         }
+         #aboutUsImg.animation{
+            transform: translateY(0px);
+         }
+
+
+        .leaf_4{
+            -moz-transform:rotate(-10deg);
+            -webkit-transform:rotate(-10deg);
+            -o-transform:rotate(-10deg);
+            -ms-transform:rotate(-10deg);
+            transform:rotate(-10deg);
+            transform:rotate(-10deg);
+            transition: 1s;
+        }
+        .leaf_4.animation{
+            -moz-transform:rotate(-9deg);
+            -webkit-transform:rotate(-9deg);
+            -o-transform:rotate(-9deg);
+            -ms-transform:rotate(-9deg);
+            transform:rotate(-9deg);
+            transform:rotate(-9deg);
+        }
+        .leaf_5{
+            -moz-transform:scaleX(-1) rotate(7deg);
+            -webkit-transform:scaleX(-1) rotate(7deg);
+            -o-transform:scaleX(-1) rotate(7deg);
+            -ms-transform:scaleX(-1) rotate(7deg);
+            transform:scaleX(-1) rotate(7deg);
+            transform: scaleX(-1) rotate(7deg);
+            transition: 1s;   
+        }
+        .leaf_5.animation{
+            -moz-transform:scaleX(-1) rotate(8deg);
+            -webkit-transform:scaleX(-1) rotate(8deg);
+            -o-transform:scaleX(-1) rotate(8deg);
+            -ms-transform:scaleX(-1) rotate(8deg);
+            transform:scaleX(-1) rotate(8deg);
+            transform: scaleX(-1) rotate(8deg);   
+        }
+        
+        .quote{
+            height: 250px;
+            width: 250px;
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-right: 7rem;
+            margin-left: 7rem;
+            color:white;
+            opacity: 0;
+            transition: 1s;
+            transform: translateY(100px);
+        }
+        .quote.animation{
+            transform: translateY(0px);
+          
+        }
+
+        .fruit{
+            opacity: 0;
+            transition: 1s;
+            transform: scale(0.5);
+        }
+
+        .fruit.animation{
+            transform: scale(1);
+        }
+        
+
+
+         
+
+       
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar" >
+    
+    <banner>
+        <!-- 葉子 -->
+        <div class="container-fluid" >
+            <div class="row " >
+                <div class="col-3 d-flex position-relative" style="z-index:5;">
+                    <div class="leaf_1 position-absolute" style="top: -100px;">
+                        <img class="" src="./img/Leaf-10.png" style="width:210px;" alt="">
+                    </div>
+                    <div class="leaf_2 position-absolute" style="top: -50px;left: -100px;">
+                        <img class="" src="./img/Leaf-11.png" style="width:250px;" alt="">
+                    </div>
+                    <div class="leaf_3 position-absolute " style="top: -150px;left: -40px;">
+                        <img class="" src="./img/Leaf-6.png" style="width:380px;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- nav bar  -->
+        <div class="container-fluid position-fixed" style="z-index: 2;">
+            <div class="nav row position-absolute w-100" style="background-color:white;" id="navbar">   
+                
+
+                <!-- 漢堡選單 -->
+                <div class="navbar d-flex align-items-between w-100" id="burger_nav">
+                    <div class="" id="logo">
+                        <img src="./img/SVG/植蘊LOGO.png" class="" style="width: 80px;" alt="">
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><img src="./img/SVG/bars-solid.svg" alt=""></span>
+                      </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                
+                                <a class="nav-link my-3" href="#product" style="width:110px">
+                                    <img src="./img/SVG/人氣商品.svg" class="img-fluid" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                
+                                <a class="nav-link my-3" href="#product" style="width:110px">
+                                    <img src="./img/SVG/關於我們.svg" class="img-fluid" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                
+                                <a class="nav-link my-3" href="#product" style="width:50px">
+                                    <img src="./img/SVG/水果.svg" class="img-fluid" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+
+                <!-- 選單 -->   
+                <div class="d-flex p-4 w-100 justify-content-center" id="nav">
+                    <a class="link mx-5" href="#product" style="width:110px">
+                        <img src="./img/SVG/人氣商品.svg" class="img-fluid" alt="">
+                    </a>
+                
+                    <a class="link mx-5" href="#about" style="width:110px">
+                        <img src="./img/SVG/關於我們.svg"  class="img-fluid" alt="">
+                    </a>
+                
+                    <a class="link mx-5" href="#fruit" style="width:50px">
+                        <img src="./img/SVG/水果.svg" class="img-fluid" alt="">
+                    </a>
+                </div>                
+            </div>  
+        </div>
+
+        <!-- banner -->
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="banner d-flex position-relative " style="height: 800px;">
+                    <div class="col-md-3 col-sm-12 d-flex flex-column justify-content-center align-items-start" id="wrap_logo_slogen">
+                        <div class="w-100" id="logo">
+                            <img src="./img/SVG/植蘊LOGO.png" class="w-100" alt="">
+                        </div>
+                        <img src="./img/SVG/Slogen.svg" class="img-fluid mx-auto" style="width:150px;" alt="" id="slogen">
+                    </div>
+                    
+                    <div class="img_wrap col-md-9 col-sm-12 px-0">
+                        <div class="">
+                            <img src="./img/banner01.jpg" alt="" class="img-fluid position-absolute" alt="">
+                        </div>
+                        <div class="">
+                            <img src="./img/banner02.jpg" alt="" class="img-fluid position-absolute" alt="">
+                        </div>
+                        <div class="">
+                            <img src="./img/banner03.jpg" alt="" class="img-fluid position-absolute" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- fixed_box -->
+                <a href="https://www.ubereats.com/tw/taipei/food-delivery/%E6%A4%8D%E8%98%8A%E6%9E%9C%E6%B1%81%E8%8C%B6%E9%A3%B2/1e3M1A2SRU6KbLP4v65Wow" class="position-fixed" style="bottom: 15px; right: 15px;z-index: 1;">
+                    <div class="position-relative" >
+                        <div class=fixedCircle></div>
+                        <img src="./img/SVG/立即訂購.svg" class="position-absolute w-50" style="top: 50% ; left:50% ; transform: translate(-50%,-50%);" alt="">
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+   </banner>
+
+    <main>
+        <div class="leafbg container-fluid">
+            <!-- 空間 -->
+            <div class="row my-5 m-0" id="product"></div>
+            <!-- 人氣商品 -->
+            <div class="row justify-content-center mt-5" >
+                <div class="link mx-5" href="#" style="width:110px">
+                    <img src="./img/SVG/人氣商品.svg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <!-- 產品 -->
+            <div class="row  d-flex flex-wrap justify-content-center">
+                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                    
+                    <img class="product_img" src="./img/產品照/植蘊果汁茶飲_莓果星系_NT$90-已調光.jpg" alt="" style="width: 100%;">
+                    <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
+                        <div class="" style="height: 5px; width: 50px; background-color: #A1D19F;"></div>
+                        <h6 class="position-absolute" style="right: 10px;top: 10px;">NT.90</h6>
+                        <h5 class="mt-3">莓果星系</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                    
+                    <img class="product_img" src="./img/產品照/植蘊果汁茶飲_現榨柳橙綠2_NT$70-已調光.jpg" alt="" style="width: 100%;">
+                    <div class="col-sm-10 col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
+                        <div class="" style="height: 5px; width: 50px; background-color: #A1D19F;"></div>
+                        <h6 class="position-absolute" style="right: 10px;top: 10px;">NT.70</h6>
+                        <h5 class="mt-3">現榨柳橙綠</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                    
+                    <img class="product_img" src="./img/產品照/植蘊果汁茶飲_酸的四次方_NT$90-已調光.jpg" alt="" style="width: 100%;">
+                    <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
+                        <div class="" style="height: 5px; width: 50px; background-color: #A1D19F;"></div>
+                        <h6 class="position-absolute" style="right: 10px;top: 10px;">NT.90</h6>
+                        <h5 class="mt-3">酸的四次方</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                    
+                    <img class="product_img" src="./img/產品照/5植蘊果汁茶飲_珍珠鮮奶蜜香紅茶_NT$75-已調光.jpg" alt="" style="width: 100%;">
+                    <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
+                        <div class="" style="height: 5px; width: 50px; background-color: #A1D19F;"></div>
+                        <h6 class="position-absolute" style="right: 10px;top: 10px;">NT.75</h6>
+                        <h5 class="mt-3">珍珠鮮奶蜜香紅茶</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                    
+                    <img class="product_img" src="./img/產品照/10植蘊果汁茶飲_四季春珍蘆椰_NT$45-已調光.jpg" alt="" style="width: 100%;">
+                    <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
+                        <div class="" style="height: 5px; width: 50px; background-color: #A1D19F;"></div>
+                        <h6 class="position-absolute" style="right: 10px;top: 10px;">NT.45</h6>
+                        <h5 class="mt-3">四季春珍蘆椰</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                    
+                    <img class="product_img" src="./img/產品照/植蘊果汁茶飲_夕燒_NT$70-已調光.jpg" alt="" style="width: 100%;">
+                    <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
+                        <div class="" style="height: 5px; width: 50px; background-color: #A1D19F;"></div>
+                        <h6 class="position-absolute" style="right: 10px;top: 10px;">NT.70</h6>
+                        <h5 class="mt-3">夕燒</h5>
+                    </div>
+                </div>
+              
+            </div>
+        </div> 
+  
+        <!-- 空間 -->
+        <div class="row my-5 m-0" id="about"></div>   
+        <!-- 關於我們 -->
+        <div class="container-fluid " >  
+            <div class="row justify-content-center my-5">
+                <div class="link" href="#" style="width:110px">
+                    <img src="./img/SVG/關於我們.svg" class="img-fluid" alt="">
+                </div> 
+            </div>
+
+            <div class="row mt-5 position-relative" style="height: 650px;margin: 100px;" id="aboutUsTextRow">
+                
+                <!-- 文字區 -->
+                <div class="col-sm-12 col-md-7 ">
+                    <div class="mx-5 d-flex justify-content-center align-items-center" style="background-color: #EAE9E5;height: 310px ;" id="aboutUsText">
+                        <p class="" style="line-height:2rem; color:#788278">
+                            你曾注意過嗎？
+                            <br>
+                            茶飲、果汁，甚至咖啡等飲品都來自植物。
+                            <br>
+                            其實我們每天都和不同的草木接觸，卻甚少留意。
+                            <br>
+                            我們以職人精神，盡力呈現植物與食物的原始形貌，<br>
+                            期望栽種出美好的平凡日常，培蘊獨特的生活味道。
+                        </p>
+                    </div>
+                </div>
+                <!-- 圖片區 -->
+                <div class="col-sm-12 col-md-7 position-absolute" style="right: 0;bottom: 0;" id="aboutUsImg">
+                    <img src="./img/about-img.jpg" class="img-fluid" alt="">
+                </div>
+
+                <!-- 葉子區 -->
+                <div class="leaf_4 position-absolute" style="bottom: 0; left:-155px;">
+                    <img src="./img/Leaf-3.png" style="width:420px;" alt="">
+                </div>
+                <div class="leaf_5 position-absolute" style="bottom: 0; left:-250px; ">
+                    <img src="./img/Leaf-4.png" style="width:400px" alt="">
+                </div>   
+            </div>
+        </div>
+
+        <!-- 空間 -->
+        <div class="row my-5 m-0" id="quoteSpace"></div>
+        <!-- 關於我們-滿版區 -->
+        <div class="container-fluid">
+            <div class="row position-relative d-flex justify-content-center align-items-center" >
+                <div class="w-100" style="height: 350px;overflow: hidden;" id="quoteBackground">
+                    <img src="./img/about-us-long-img.jpg" class="w-100" style="object-fit: fill;" alt="">
+                </div>
+                <div class="position-absolute d-flex justify-content-between" id="quote_wrap">
+                    <div class="quote d-flex flex-column justify-content-center align-items-center">
+                        
+                        <h1 class="text-center mb-0">❝</h1>
+                        <h5 class="text-center mb-3">最真實的樣子</h5>
+                        <p class="text-center" style="color: white;">
+                            最令人深刻的
+                            <br>
+                            總是平淡簡單的
+                            <br>
+                            日常
+                        </p>
+                    </div>
+                    <div class="quote d-flex flex-column justify-content-center align-items-center">
+                        
+                        <h1 class="text-center mb-0">❝</h1>
+                        <h5 class="text-center mb-3">日常飲食的選擇</h5>
+                        <p class="text-center" style="color: white;">
+                            口中的濃郁口感
+                            <br>
+                            與厚實香氣
+                            <br>
+                            並不是真的
+                        </p>
+                    </div>
+                    <div class="quote d-flex flex-column justify-content-center align-items-center">
+                        
+                        <h1 class="text-center mb-0">❝</h1>
+                        <h5 class="text-center mb-3">獨特的生活味道</h5>
+                        <p class="text-center" style="color: white;">
+                            城市的潮濕角落
+                            <br>
+                            總有小而堅強的
+                            <br>
+                            植株默默發展     
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 空間 -->
+        <div class="row my-5 m-0"></div>
+        <div class="container">
+            <!-- 空間 -->
+            <div class="row my-5 m-0" id="fruit"></div>
+            <!-- 水果 -->
+            <div class="row justify-content-center mt-5">
+                <div class="link mx-5" href="#" >
+                    <img src="./img/SVG/水果.svg" class="img-fluid"  style="width:50px" alt="">
+                </div>
+            </div>
+
+            <div class="row my-5 d-flex justify-content-center">
+                <div >
+                    <p>
+                        植蘊深信，如果飲品的本質足夠優秀，
+                        <br>
+                        就不需依靠添加物或過多糖分來加強味道。
+                    </p>
+                </div>    
+            </div>
+            
+            <!-- 水果介紹區 -->
+            <div class="row " >
+                <!-- 葉子 -->
+                <div class="position-relative">
+                    <!-- 鳳梨旁 -->
+                    <div class="leaf_7 position-absolute" style="top: 125px;left: 100px;transform: rotate(160deg);">
+                        <img class="" src="./img/Leaf-11.png" style="width:150px" alt="">
+                    </div>
+                    <div class="leaf_8 position-absolute " style="top: 180px;left: 50px;transform: rotate(110deg);">
+                        <img class="" src="./img/Leaf-6.png" style="width:220px" alt="">
+                    </div>
+                    <!-- 香蕉旁 -->
+                    <div class="leaf_9 position-absolute" style="top: 450px;right: 90px">
+                        <img class="" src="./img/Leaf-10.png" style="width:200px" alt="">
+                    </div>
+                    <div class="leaf_10 position-absolute" style="top: 350px;right: 50px;transform: rotate(30deg);">
+                        <img class="" src="./img/Leaf-3.png" style="width:200px" alt="">
+                    </div>
+                    <!-- 百香果旁 -->
+                    <div class="leaf_11 position-absolute " style="top: 600px;left: 180px;transform: rotate(180deg) scaleX(-1);">
+                        <img class="" src="./img/Leaf-9.png" style="width:120px" alt="">
+                    </div>
+                    <div class="leaf_12 position-absolute " style="top: 500px;left: 40px;transform: rotate(110deg);">
+                        <img class="" src="./img/Leaf-6.png" style="width:280px" alt="">
+                    </div>
+                    
+
+
+
+                    <!-- 檸檬 -->
+                    <div class="fruit d-flex justify-content-center align-items-center my-1" id="fruit">
+                        <div class="fruit_img col-sm-12 col-md-3">
+                            <img src="./img/lemon.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="fruit_text col-sm-12 col-md-4 pl-5 d-flex flex-column justify-content-center align-self-center" style="background-color: #EAE9E5;height: 150px;" id="lemmon_text">
+                            <h5>檸檬</h5>
+                            <p>屏東 優利卡</p>
+                        </div>
+                    </div>
+                    <!-- 鳳梨 -->
+                    <div class="fruit d-flex justify-content-center align-items-center my-1" id="fruit">
+                        <div class="fruit_text col-sm-12 col-md-4 pl-5 d-flex flex-column justify-content-center align-self-center" style="background-color: #EAE9E5;height: 150px;" id="pineapple_text">
+                            <h5>阿海伯鳳梨</h5>
+                            <p>嘉義 安心農場</p>
+                        </div>
+                        <div class="fruit_img col-sm-12 col-md-3">
+                            <img src="./img/pineapple.jpg" class="img-fluid" alt="">
+                        </div>   
+                    </div>
+                    <!-- 香蕉 -->
+                    <div class="fruit d-flex justify-content-center align-items-center my-1" id="fruit">
+                        <div class="fruit_img col-sm-12 col-md-3">
+                            <img src="./img/banana.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="fruit_text col-sm-12 col-md-4 pl-5 d-flex flex-column justify-content-center align-self-center" style="background-color: #EAE9E5;height: 150px;" id="banana_text">
+                            <h5>香蕉</h5>
+                            <p>屏東 內埔</p>
+                        </div>
+                    </div>
+                    <!-- 百香果 -->
+                    <div class="fruit d-flex justify-content-center align-items-center my-1" id="fruit">
+                        <div class="fruit_text col-sm-12 col-md-4 pl-5 d-flex flex-column justify-content-center align-self-center" style="background-color: #EAE9E5;height: 150px;" id="passion_text">
+                            <h5>百香果</h5>
+                            <p>埔里 太平合作農場</p>
+                        </div>
+                        <div class="fruit_img col-sm-12 col-md-3">
+                            <img src="./img/passion.jpg" class="img-fluid" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+
+        </div>
+       
+   </main>
+
+
+   <footer>
+       <!-- 空間 -->
+       <div class="row my-5 m-0" style="height: 200px;" id="footerSpace"></div>
+
+       <!-- footer -->
+       <div class="container-fluid">
+           <div class="footer_row row p-5" style="background-color: #CCE6CB;">
+               <div class="col-sm-12 col-md-6 d-flex justify-content-end">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14455.691317365354!2d121.5192993!3d25.0706046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb72f43e7f53796ad!2z5qSN6JiKIOaenOiMtuijveeglOaJgA!5e0!3m2!1szh-TW!2stw!4v1602764191151!5m2!1szh-TW!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+               </div>
+               <div class="col-sm-12 col-md-6 ">
+                   <div>
+                        <p style="line-height:2rem;color:#788278;">
+                            連繫電話：02-25970097
+                            <br>
+                            植蘊地址：台北市大同區酒泉街30-1號(圓山站1號出口)
+                            <br>
+                            營業時間：12:00-21:00(每個月第一周禮拜一公休)
+                       </p>
+                   </div>
+                   
+               </div>
+           </div>
+       </div>
+   </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script>
+       
+        let imgIndex = 0;
+        let scrollLast = 0;
+        let mousePoitionNow = 0;
+
+        // banner輪播
+        setInterval(function(){
+            if(imgIndex>=3){
+                imgIndex=0;
+            }
+
+            $('.img_wrap img').eq(imgIndex).css('opacity','1').parent().siblings().children().css('opacity','0');
+
+            imgIndex+=1;
+        },3000);
+
+        // 葉子動!!!!!!!!!!!!!!!!!!!!!!!最後要原位/Y軸 
+        $('.leaf_3').mousemove(function(event){
+            
+            let mousePositionX = event.pageX;
+           
+            // console.log('mousePositionX',mousePositionX);
+            if( mousePositionX < mousePoitionNow){
+                $('.leaf_3').removeClass('animationRight');
+                $('.leaf_3').addClass('animationLeft');
+                $('.leaf_2').removeClass('animationLeft');
+                $('.leaf_2').addClass('animationRight');
+                $('.leaf_1').addClass('animation');
+                // console.log('mouseLeft');   
+            }else{
+                $('.leaf_3').removeClass('animationLeft');
+                $('.leaf_3').addClass('animationRight');
+                $('.leaf_2').removeClass('animationRight');
+                $('.leaf_2').addClass('animationLeft');
+                $('.leaf_1').removeClass('animation');
+                // console.log('mouseright');   
+            }
+            mousePoitionNow = mousePositionX;
+            // console.log('mousePoitionNow',mousePoitionNow);
+           
+        })
+
+ 
+        // nav自動縮!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1往上有問題
+        $(window).scroll(function(){
+            
+            // console.log('scrollLast',scrollLast);
+            let scrollNow = $(this).scrollTop()
+            // console.log('scrollNow', scrollNow);
+            if(scrollNow > scrollLast){
+                $('.nav').addClass('hide');
+            }else{
+                $('.nav').removeClass('hide');
+            }
+
+            scrollLast = scrollNow;
+        })
+
+
+
+        // 漢堡選單
+        $(document).ready(function(){
+            $(window).resize(function() {
+                let wdth=$(window).width();
+                console.log(wdth);
+                if(wdth < 768){
+                    $('#burger_nav').show();
+                    $('#nav').addClass('padding');
+                    
+                    $('.link').hide();
+                }else{
+                    $('#burger_nav').hide();
+                    $('#nav').removeClass('padding');
+                   
+                    $('.link').show();
+                }
+            });
+        });
+
+        // 產品hover縮放 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!模糊
+        $('.product_img').mouseenter(function(){
+            // console.log('hi');
+            $(this).css('transform','scale(1.1)');
+        }).mouseleave(function(){
+            $(this).css('transform','scale(1)');
+        })
+
+        // nav往下動畫!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        // $('body').scrollspy({ target:'#navbar'});
+        // $('#navbar a').on('click',function(event){
+        // // check for a hash value
+        //     if(this.hash !==""){
+            
+        // // prevent default behavior
+        //         event.preventDefault();
+                
+        // // Store hash
+        //         const hash = this.hash;
+        //         $('html,body').animate({
+        //             scrollTop: $(hash).offset().top
+        //         }, 1000, function(){
+        // // Add hush to URL after scroll
+        //             window.location.hash = hash;
+        //         })
+        //     }
+        // })
+
+
+
+
+        // aboutUs區
+            // 圖文
+        $(window).scroll(function(){
+            let scrollTop = $(this).scrollTop();
+            // console.log(scrollTop);
+
+            if(scrollTop>1500){
+                $('#aboutUsText').css('opacity','1').addClass('animation');
+                $('#aboutUsImg').css('opacity','1').addClass('animation')
+                
+            }else{
+                $('#aboutUsText').css('opacity','0').removeClass('animation');
+                $('#aboutUsImg').css('opacity','0').removeClass('animation');
+            }
+
+        })
+        
+            // 葉子
+        setInterval(function(){
+            $('.leaf_4').toggleClass('animation');
+            $('.leaf_5').toggleClass('animation');
+            
+            }
+        ,1000);
+            
+            // 三個圓
+        $(window).scroll(function(){
+        let scrollTop = $(this).scrollTop();
+        // console.log(scrollTop);
+
+        if(scrollTop>2150){
+            $('.quote').css('opacity','1').addClass('animation');
+                
+        }else{
+            $('.quote').css('opacity','0').removeClass('animation');
+            
+        }
+
+        })
+
+
+        // 水果區
+        $(window).scroll(function(){
+            let scrollTop = $(this).scrollTop();
+            // console.log(scrollTop);
+
+            if(scrollTop>2900){
+                
+                $('.fruit').css('opacity','1').addClass('animation');
+                
+                
+            }else{
+                $('.fruit').css('opacity','0').removeClass('animation');
+                
+            }
+
+        })
+    </script>
+</body>
+</html>
