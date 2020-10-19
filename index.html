@@ -30,10 +30,11 @@
             .banner{
                 flex-direction: column;
                 height: 400px !important;
+                padding-top: 80px;
             }
             
             .img_wrap{
-                width: 700px;
+                
             }
             
     
@@ -85,7 +86,7 @@
                 position: relative !important;
             }
             .quote{
-                direction: row !important;
+                flex-direction: column !important;
                 height: 150px !important;
                 width: 150px !important;
                 border: 1px solid #9CA0A4 !important;
@@ -141,6 +142,14 @@
                font-size: 12px !important;
                line-height: normal !important;
                padding-top: 10px !important;
+           }
+
+           #map_wrap{
+               justify-content: center !important;
+           }
+           #info_wrap{
+               display: flex;
+               justify-content: center;
            }
         }
         
@@ -246,6 +255,7 @@
         }
 
         .product_img{
+            transform: translateZ(0);
             transition: .5s;
         }
 
@@ -362,7 +372,7 @@
                 
 
                 <!-- 漢堡選單 -->
-                <div class="navbar d-flex align-items-between w-100" id="burger_nav">
+                <div class="navbar align-items-between w-100 py-0" id="burger_nav">
                     <div class="" id="logo">
                         <img src="./img/SVG/植蘊LOGO.png" class="" style="width: 80px;" alt="">
                     </div>
@@ -373,19 +383,19 @@
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
                                 
-                                <a class="nav-link my-3" href="#product" style="width:110px">
+                                <a class="nav-link my-3 ml-3" href="#product" style="width:110px">
                                     <img src="./img/SVG/人氣商品.svg" class="img-fluid" alt="">
                                 </a>
                             </li>
                             <li class="nav-item">
                                 
-                                <a class="nav-link my-3" href="#product" style="width:110px">
+                                <a class="nav-link my-3 ml-3" href="#product" style="width:110px">
                                     <img src="./img/SVG/關於我們.svg" class="img-fluid" alt="">
                                 </a>
                             </li>
                             <li class="nav-item">
                                 
-                                <a class="nav-link my-3" href="#product" style="width:50px">
+                                <a class="nav-link my-3 ml-3" href="#product" style="width:50px">
                                     <img src="./img/SVG/水果.svg" class="img-fluid" alt="">
                                 </a>
                             </li>
@@ -395,15 +405,15 @@
 
                 <!-- 選單 -->   
                 <div class="d-flex p-4 w-100 justify-content-center" id="nav">
-                    <a class="link mx-5" href="#product" style="width:110px">
+                    <a class="upper_link mx-5" href="#product" style="width:110px">
                         <img src="./img/SVG/人氣商品.svg" class="img-fluid" alt="">
                     </a>
                 
-                    <a class="link mx-5" href="#about" style="width:110px">
+                    <a class="upper_link mx-5" href="#about" style="width:110px">
                         <img src="./img/SVG/關於我們.svg"  class="img-fluid" alt="">
                     </a>
                 
-                    <a class="link mx-5" href="#fruit" style="width:50px">
+                    <a class="upper_link mx-5" href="#fruit" style="width:50px">
                         <img src="./img/SVG/水果.svg" class="img-fluid" alt="">
                     </a>
                 </div>                
@@ -413,7 +423,7 @@
         <!-- banner -->
         <div class="container-fluid ">
             <div class="row">
-                <div class="banner d-flex position-relative " style="height: 800px;">
+                <div class="banner d-flex position-relative w-100" style="height: 800px;">
                     <div class="col-md-3 col-sm-12 d-flex flex-column justify-content-center align-items-start" id="wrap_logo_slogen">
                         <div class="w-100" id="logo">
                             <img src="./img/SVG/植蘊LOGO.png" class="w-100" alt="">
@@ -422,13 +432,13 @@
                     </div>
                     
                     <div class="img_wrap col-md-9 col-sm-12 px-0">
-                        <div class="">
+                        <div class="w-100">
                             <img src="./img/banner01.jpg" alt="" class="img-fluid position-absolute" alt="">
                         </div>
-                        <div class="">
+                        <div class="w-100">
                             <img src="./img/banner02.jpg" alt="" class="img-fluid position-absolute" alt="">
                         </div>
-                        <div class="">
+                        <div class="w-100">
                             <img src="./img/banner03.jpg" alt="" class="img-fluid position-absolute" alt="">
                         </div>
                     </div>
@@ -714,11 +724,11 @@
        <!-- footer -->
        <div class="container-fluid">
            <div class="footer_row row p-5" style="background-color: #CCE6CB;">
-               <div class="col-sm-12 col-md-6 d-flex justify-content-end">
+               <div class="col-sm-12 col-md-6 d-flex justify-content-end" id="map_wrap">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14455.691317365354!2d121.5192993!3d25.0706046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb72f43e7f53796ad!2z5qSN6JiKIOaenOiMtuijveeglOaJgA!5e0!3m2!1szh-TW!2stw!4v1602764191151!5m2!1szh-TW!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                </div>
-               <div class="col-sm-12 col-md-6 ">
-                   <div>
+               <div class="col-sm-12 col-md-6" id="info_wrap">
+                   <div >
                         <p style="line-height:2rem;color:#788278;">
                             連繫電話：02-25970097
                             <br>
@@ -807,12 +817,12 @@
                     $('#burger_nav').show();
                     $('#nav').addClass('padding');
                     
-                    $('.link').hide();
+                    $('.upper_link').hide();
                 }else{
                     $('#burger_nav').hide();
                     $('#nav').removeClass('padding');
                    
-                    $('.link').show();
+                    $('.upper_link').show();
                 }
             });
         });
