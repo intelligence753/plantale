@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
         *{
             color:#9CA0A4;
             font-family: 'Noto Sans TC', sans-serif;
@@ -29,12 +30,14 @@
 
             .banner{
                 flex-direction: column;
-                height: 400px !important;
+                height: 300px !important;
                 padding-top: 80px;
             }
             
-            .img_wrap{
-                
+            .fixedCircle{
+                height: 70px !important;
+                width: 70px !important;
+            
             }
             
     
@@ -49,9 +52,12 @@
             } */
 
             #product_wrap{
-                margin: 3rem 0 !important;
+                margin: 2rem 0 !important;
             }
 
+            .h6, h6{
+                font-size: 0.5rem !important;
+            }
 
 
             #aboutUsTextRow{
@@ -112,9 +118,15 @@
                 display: none !important;
             }
 
+            
+
             #fruit{
                 flex-direction: column !important;
                 margin: 20px !important;
+            }
+
+            #fruit-content{
+                /* margin-bottom: 1rem !important; */
             }
             
             .fruit_text{
@@ -257,6 +269,7 @@
         .product_img{
             transform: translateZ(0);
             transition: .5s;
+            backface-visibility: hidden;
         }
 
          /* 關於我們 */
@@ -341,7 +354,7 @@
         }
         
 
-
+        
          
 
        
@@ -389,14 +402,14 @@
                             </li>
                             <li class="nav-item">
                                 
-                                <a class="nav-link my-3 ml-3" href="#product" style="width:110px">
+                                <a class="nav-link my-3 ml-3" href="#about" style="width:110px">
                                     <img src="./img/SVG/關於我們.svg" class="img-fluid" alt="">
                                 </a>
                             </li>
                             <li class="nav-item">
                                 
-                                <a class="nav-link my-3 ml-3" href="#product" style="width:50px">
-                                    <img src="./img/SVG/水果.svg" class="img-fluid" alt="">
+                                <a class="nav-link my-3 ml-3" href="#fruitSpace" style="width:110px">
+                                    <img src="./img/SVG/嚴選水果.svg" class="img-fluid" alt="">
                                 </a>
                             </li>
                         </ul>
@@ -413,8 +426,8 @@
                         <img src="./img/SVG/關於我們.svg"  class="img-fluid" alt="">
                     </a>
                 
-                    <a class="upper_link mx-5" href="#fruit" style="width:50px">
-                        <img src="./img/SVG/水果.svg" class="img-fluid" alt="">
+                    <a class="upper_link mx-5" href="#fruitSpace" style="width:110px">
+                        <img src="./img/SVG/嚴選水果.svg" class="img-fluid" alt="">
                     </a>
                 </div>                
             </div>  
@@ -469,7 +482,7 @@
             </div>
             <!-- 產品 -->
             <div class="row  d-flex flex-wrap justify-content-center">
-                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                <div class="col-6 col-md-3 my-5 mx-4" id="product_wrap">
                     
                     <img class="product_img" src="./img/產品照/植蘊果汁茶飲_莓果星系_NT$90-已調光.jpg" alt="" style="width: 100%;">
                     <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
@@ -478,7 +491,7 @@
                         <h5 class="mt-3">莓果星系</h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                <div class="col-6 col-md-3 my-5 mx-4" id="product_wrap">
                     
                     <img class="product_img" src="./img/產品照/植蘊果汁茶飲_現榨柳橙綠2_NT$70-已調光.jpg" alt="" style="width: 100%;">
                     <div class="col-sm-10 col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
@@ -487,7 +500,7 @@
                         <h5 class="mt-3">現榨柳橙綠</h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                <div class="col-6 col-md-3 my-5 mx-4" id="product_wrap">
                     
                     <img class="product_img" src="./img/產品照/植蘊果汁茶飲_酸的四次方_NT$90-已調光.jpg" alt="" style="width: 100%;">
                     <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
@@ -496,7 +509,7 @@
                         <h5 class="mt-3">酸的四次方</h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                <div class="col-6 col-md-3 my-5 mx-4" id="product_wrap">
                     
                     <img class="product_img" src="./img/產品照/5植蘊果汁茶飲_珍珠鮮奶蜜香紅茶_NT$75-已調光.jpg" alt="" style="width: 100%;">
                     <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
@@ -505,7 +518,7 @@
                         <h5 class="mt-3">珍珠鮮奶蜜香紅茶</h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                <div class="col-6 col-md-3 my-5 mx-4" id="product_wrap">
                     
                     <img class="product_img" src="./img/產品照/10植蘊果汁茶飲_四季春珍蘆椰_NT$45-已調光.jpg" alt="" style="width: 100%;">
                     <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
@@ -514,7 +527,7 @@
                         <h5 class="mt-3">四季春珍蘆椰</h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 my-5 mx-4" id="product_wrap">
+                <div class="col-6 col-md-3 my-5 mx-4" id="product_wrap">
                     
                     <img class="product_img" src="./img/產品照/植蘊果汁茶飲_夕燒_NT$70-已調光.jpg" alt="" style="width: 100%;">
                     <div class="col-sm-10 col-md-10 mx-auto p-3 position-relative" style="background-color: white;box-shadow: 0px 3px 6px black; margin-top: -15px;">
@@ -622,17 +635,17 @@
         <div class="row my-5 m-0"></div>
         <div class="container">
             <!-- 空間 -->
-            <div class="row my-5 m-0" id="fruit"></div>
+            <div class="row my-5 m-0" id="fruitSpace"></div>
             <!-- 水果 -->
             <div class="row justify-content-center mt-5">
                 <div class="link mx-5" href="#" >
-                    <img src="./img/SVG/水果.svg" class="img-fluid"  style="width:50px" alt="">
+                    <img src="./img/SVG/嚴選水果.svg" class="img-fluid"  style="width:110px" alt="">
                 </div>
             </div>
 
-            <div class="row my-5 d-flex justify-content-center">
+            <div class="row my-5 d-flex justify-content-center" id="fruit-content">
                 <div >
-                    <p>
+                    <p class="text-center">
                         植蘊深信，如果飲品的本質足夠優秀，
                         <br>
                         就不需依靠添加物或過多糖分來加強味道。
@@ -771,6 +784,7 @@
            
             // console.log('mousePositionX',mousePositionX);
             if( mousePositionX < mousePoitionNow){
+
                 $('.leaf_3').removeClass('animationRight');
                 $('.leaf_3').addClass('animationLeft');
                 $('.leaf_2').removeClass('animationLeft');
@@ -791,7 +805,7 @@
         })
 
  
-        // nav自動縮!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1往上有問題
+        // nav.hide!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!往上hide會故障
         $(window).scroll(function(){
             
             // console.log('scrollLast',scrollLast);
@@ -805,14 +819,20 @@
 
             scrollLast = scrollNow;
         })
+        
+        // $('.upper_link').on('click',function(){
+        //     $('.nav').addClass('hide');
+        //     console.log('hi')
+        // })
+
+        
 
 
-
-        // 漢堡選單
+        // 漢堡選單出現
         $(document).ready(function(){
             $(window).resize(function() {
                 let wdth=$(window).width();
-                console.log(wdth);
+                // console.log(wdth);
                 if(wdth < 768){
                     $('#burger_nav').show();
                     $('#nav').addClass('padding');
@@ -826,8 +846,22 @@
                 }
             });
         });
+        // 漢堡點a會自動收
+        $('.navbar-nav a').on('click', function(){
+            $('#navbarSupportedContent').removeClass('show');
+            console.log('hi');
+            }
+        );
 
-        // 產品hover縮放 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!模糊
+           
+
+
+
+
+        
+
+
+        // 產品hover縮放
         $('.product_img').mouseenter(function(){
             // console.log('hi');
             $(this).css('transform','scale(1.1)');
@@ -835,26 +869,22 @@
             $(this).css('transform','scale(1)');
         })
 
-        // nav往下動畫!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-        // $('body').scrollspy({ target:'#navbar'});
-        // $('#navbar a').on('click',function(event){
-        // // check for a hash value
-        //     if(this.hash !==""){
-            
-        // // prevent default behavior
-        //         event.preventDefault();
-                
-        // // Store hash
-        //         const hash = this.hash;
-        //         $('html,body').animate({
-        //             scrollTop: $(hash).offset().top
-        //         }, 1000, function(){
-        // // Add hush to URL after scroll
-        //             window.location.hash = hash;
-        //         })
-        //     }
-        // })
+        // nav往下動畫順暢
+        $('#navbar a').on('click',function(event){
+        // check for a hash value
+            if(this.hash !==""){   
+        // prevent default behavior
+                event.preventDefault();
+        // Store hash
+                const hash = this.hash;
+                $('html,body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000, function(){
+        // Add hush to URL after scroll
+                    window.location.hash = hash;
+                })
+            }
+        })
 
 
 
@@ -863,9 +893,16 @@
             // 圖文
         $(window).scroll(function(){
             let scrollTop = $(this).scrollTop();
+            let scrollTopAbout = 1500;
             // console.log(scrollTop);
 
-            if(scrollTop>1500){
+            let isMobile = $(this).width() < 768
+            
+            if(isMobile){
+                scrollTopAbout = 760;
+            }
+
+            if(scrollTop>scrollTopAbout){
                 $('#aboutUsText').css('opacity','1').addClass('animation');
                 $('#aboutUsImg').css('opacity','1').addClass('animation')
                 
@@ -873,6 +910,10 @@
                 $('#aboutUsText').css('opacity','0').removeClass('animation');
                 $('#aboutUsImg').css('opacity','0').removeClass('animation');
             }
+
+            
+           
+            
 
         })
         
@@ -887,9 +928,15 @@
             // 三個圓
         $(window).scroll(function(){
         let scrollTop = $(this).scrollTop();
+        let scrollTopCircle = 2150;
         // console.log(scrollTop);
+        let isMobile = $(this).width() < 768
+        
+        if(isMobile){
+                scrollTopCircle = 1227;
+            }
 
-        if(scrollTop>2150){
+        if(scrollTop > scrollTopCircle){
             $('.quote').css('opacity','1').addClass('animation');
                 
         }else{
@@ -903,9 +950,15 @@
         // 水果區
         $(window).scroll(function(){
             let scrollTop = $(this).scrollTop();
-            // console.log(scrollTop);
+            let scrollTopFruit = 2900;
+            console.log(scrollTop);
 
-            if(scrollTop>2900){
+            let isMobile = $(this).width() < 768;
+            if(isMobile){
+                scrollTopFruit = 1930;
+            }
+
+            if(scrollTop>scrollTopFruit){
                 
                 $('.fruit').css('opacity','1').addClass('animation');
                 
