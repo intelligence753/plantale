@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="./img/favicon.PNG" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>植蘊 果茶製研所</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -362,14 +364,30 @@
         }
 
         .leaf_9.animation{
-            -moz-transform:rotate(7deg);
-            -webkit-transform:rotate(7deg);
-            -o-transform:rotate(7deg);
-            -ms-transform:rotate(7deg);
-            transform:rotate(7deg);
-            transform: rotate(7deg);   
+            -moz-transform:rotate(1deg);
+            -webkit-transform:rotate(1deg);
+            -o-transform:rotate(1deg);
+            -ms-transform:rotate(1deg);
+            transform:rotate(1deg);
+            transform: rotate(1deg);   
         }
-        
+        .leaf_11{
+            -moz-transform:scaleX(-1) rotate(180deg);
+            -webkit-transform:scaleX(-1) rotate(180deg);
+            -o-transform:scaleX(-1) rotate(180deg);
+            -ms-transform:scaleX(-1) rotate(180deg);
+            transform:scaleX(-1) rotate(180deg);
+            transform: scaleX(-1) rotate(180deg);
+            transition:1s
+        }
+        .leaf_11.animation{
+            -moz-transform:scaleX(-1) rotate(178deg);
+            -webkit-transform:scaleX(-1) rotate(178deg);
+            -o-transform:scaleX(-1) rotate(178deg);
+            -ms-transform:scaleX(-1) rotate(178deg);
+            transform:scaleX(-1) rotate(178deg);
+            transform: scaleX(-1) rotate(178deg);  
+        }
 
         
          
@@ -390,7 +408,7 @@
                     <div class="leaf_2 position-absolute" style="top: -50px;left: -100px;">
                         <img class="" src="./img/Leaf-11.png" style="width:250px;" alt="">
                     </div>
-                    <div class="leaf_3 position-absolute " style="top: -150px;left: -40px; background-color: aqua;">
+                    <div class="leaf_3 position-absolute " style="top: -150px;left: -40px; ">
                         <img class="" src="./img/Leaf-6.png" style="width:380px;" alt="">
                     </div>
                 </div>
@@ -476,7 +494,7 @@
                 </div>
 
                 <!-- fixed_box -->
-                <a href="https://www.ubereats.com/tw/taipei/food-delivery/%E6%A4%8D%E8%98%8A%E6%9E%9C%E6%B1%81%E8%8C%B6%E9%A3%B2/1e3M1A2SRU6KbLP4v65Wow" class="position-fixed" style="bottom: 15px; right: 15px;z-index: 1;">
+                <a href="https://www.ubereats.com/tw/taipei/food-delivery/%E6%A4%8D%E8%98%8A%E6%9E%9C%E6%B1%81%E8%8C%B6%E9%A3%B2/1e3M1A2SRU6KbLP4v65Wow" class="position-fixed" style="bottom: 15px; right: 15px;z-index: 1;" id="cta">
                     <div class="position-relative" >
                         <div class=fixedCircle></div>
                         <img src="./img/SVG/立即訂購.svg" class="position-absolute w-50" style="top: 50% ; left:50% ; transform: translate(-50%,-50%);" alt="">
@@ -689,7 +707,7 @@
                         <img class="" src="./img/Leaf-3.png" style="width:200px" alt="">
                     </div>
                     <!-- 百香果旁 -->
-                    <div class="leaf_11 position-absolute " style="top: 600px;left: 180px;transform: rotate(180deg) scaleX(-1);">
+                    <div class="leaf_11 position-absolute " style="top: 600px;left: 180px;">
                         <img class="" src="./img/Leaf-9.png" style="width:120px" alt="">
                     </div>
                     <div class="leaf_12 position-absolute " style="top: 500px;left: 40px;transform: rotate(110deg);">
@@ -795,47 +813,56 @@
         },3000);
 
         // 葉子動!!!!!!!!!!!!!!!!!!!!!!!最後要原位/Y軸 
-        // $('.leaf_3').mousemove(function(event){
-            
-        //     let mousePositionX = event.pageX;
-        //     let mousePositionY = event.pageY;
-           
-        //     console.log('mousePositionX',mousePositionX);
-        //     console.log('mousePositionY',mousePositionY);
-        //     if( mousePositionX < mousePoitionNow){
-
-        //         $('.leaf_3').removeClass('animationRight');
-        //         $('.leaf_3').addClass('animationLeft');
-        //         $('.leaf_2').removeClass('animationLeft');
-        //         $('.leaf_2').addClass('animationRight');
-        //         $('.leaf_1').addClass('animation');
-        //         // console.log('mouseLeft');   
-        //     }else{
-        //         $('.leaf_3').removeClass('animationLeft');
-        //         $('.leaf_3').addClass('animationRight');
-        //         $('.leaf_2').removeClass('animationRight');
-        //         $('.leaf_2').addClass('animationLeft');
-        //         $('.leaf_1').removeClass('animation');
-        //         // console.log('mouseright');   
-        //     }
-        //     mousePoitionNow = mousePositionX;
-        //     // console.log('mousePoitionNow',mousePoitionNow);
-           
-        // })
-        
         $('.leaf_3').mousemove(function(event){
             
-            let OffSetX = event.offsetX;
-            let OffSetY = event.offsetY;
-            
-            console.log('OffSetX', event.offsetX);
-            console.log('OffSetY', event.offsetY);
+            let mousePositionX = event.pageX;
+            let mousePositionY = event.pageY;
+           
+            console.log('mousePositionX',mousePositionX);
+            console.log('mousePositionY',mousePositionY);
+            if( mousePositionX < mousePoitionNow){
 
-            if(OffSetX>190){
-                $('.leaf_3').css('transform','rotate(-26deg)');
+                $('.leaf_3').removeClass('animationRight');
+                $('.leaf_3').addClass('animationLeft');
+                $('.leaf_2').removeClass('animationLeft');
+                $('.leaf_2').addClass('animationRight');
+                $('.leaf_1').addClass('animation');
+                // console.log('mouseLeft');   
+            }else{
+                $('.leaf_3').removeClass('animationLeft');
+                $('.leaf_3').addClass('animationRight');
+                $('.leaf_2').removeClass('animationRight');
+                $('.leaf_2').addClass('animationLeft');
+                $('.leaf_1').removeClass('animation');
+                // console.log('mouseright');   
             }
+            mousePoitionNow = mousePositionX;
+            // console.log('mousePoitionNow',mousePoitionNow);
+           
+        })
+        
+        // $(window).mousemove(function(event){
+        //     let mousePositionX = event.pageX;
+        //     let mousePositionY = event.pageY;
+        //     let windoWidth = $(window).width(); 
+          
+        //     // console.log('mousePositionX',mousePositionX);
+        //     // console.log('mousePositionY',mousePositionY);
+        //     let LeafRotateRight =  -50-((mousePositionX/windoWidth)*10)
+        //     let LeafRotateLeft =  50-(mousePositionX/windoWidth)*10
+
+        //     console.log('LeafRotateRight',LeafRotateRight);
+        //     console.log('LeafRotateLeft',LeafRotateLeft);
             
-        });
+        //    console.log('percent',mousePositionX / windoWidth)
+        //     if(mousePositionX / windoWidth  < 0.5){
+        //         $('.leaf_3').css('transform','rotate(' + LeafRotateLeft + 'deg)');
+        //     }else if(mousePositionX / windoWidth  < 1){
+        //         $('.leaf_3').css('transform','rotate(' + LeafRotateRight + 'deg)');
+        //     }
+
+            
+        // });
 
         
 
@@ -868,35 +895,35 @@
         
 
 
-        // 漢堡選單出現
-        $(document).ready(function(){
-            $(window).resize(function() {
-                let wdth=$(window).width();
-                // console.log(wdth);
-                if(wdth < 768){
-                    $('#burger_nav').show();
-                    $('#nav').addClass('padding');
+        // 漢堡選單出現(兩個版本)
+        // $(document).ready(function(){
+        //     $(window).resize(function() {
+        //         let wdth=$(window).width();
+        //         // console.log(wdth);
+        //         if(wdth < 768){
+        //             $('#burger_nav').show();
+        //             $('#nav').addClass('padding');
                     
-                    $('.upper_link').hide();
-                }else{
-                    $('#burger_nav').hide();
-                    $('#nav').removeClass('padding');
+        //             $('.upper_link').hide();
+        //         }else{
+        //             $('#burger_nav').hide();
+        //             $('#nav').removeClass('padding');
                    
-                    $('.upper_link').show();
-                }
-            });
-        });
-        // let isMobile = $(window).width() < 768
+        //             $('.upper_link').show();
+        //         }
+        //     });
+        // });
+        let isMobile = $(window).width() < 768
         
-        // if(isMobile){
-        //     $('#burger_nav').show();
-        //     $('#nav').addClass('padding');
-        //     $('.upper_link').hide();    
-        // }else{
-        //     $('#burger_nav').hide();
-        //     $('#nav').removeClass('padding');
-        //     $('.upper_link').show();
-        // }
+        if(isMobile){
+            $('#burger_nav').show();
+            $('#nav').addClass('padding');
+            $('.upper_link').hide();    
+        }else{
+            $('#burger_nav').hide();
+            $('#nav').removeClass('padding');
+            $('.upper_link').show();
+        }
 
 
         // 漢堡點a會自動收
@@ -909,7 +936,12 @@
            
 
 
-
+        // fixed-btn動畫
+        $('#cta').mouseenter(function(){
+            $('.fixedCircle').css('background-color','#9CA0A4')
+        }).mouseleave(function(){
+            $('.fixedCircle').css('background-color','#488E44')
+        })
 
         
 
@@ -1024,9 +1056,10 @@
         })
 
         // 水果區葉子吹動
-        // setInterval(function(){
-        //     $('.leaf_9').toggleClass('animation');
-        // },3000)
+        setInterval(function(){
+            $('.leaf_9').toggleClass('animation');
+            $('.leaf_11').toggleClass('animation');
+        },1000)
 
         
 
