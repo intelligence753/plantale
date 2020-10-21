@@ -20,6 +20,9 @@
         
 
         @media screen and (max-width: 768px) {
+            body{
+                font-size: 0.5rem;
+            }
             .leaf_1, .leaf_2, .leaf_3{
                 display: none;
             }
@@ -125,9 +128,7 @@
                 margin: 20px !important;
             }
 
-            #fruit-content{
-                /* margin-bottom: 1rem !important; */
-            }
+            
             
             .fruit_text{
                 height: 100px !important;
@@ -343,6 +344,8 @@
           
         }
 
+        /* 水果區 */
+
         .fruit{
             opacity: 0;
             transition: 1s;
@@ -351,6 +354,20 @@
 
         .fruit.animation{
             transform: scale(1);
+        }
+
+        .leaf_9{
+              
+            transition: 1.5s;
+        }
+
+        .leaf_9.animation{
+            -moz-transform:rotate(7deg);
+            -webkit-transform:rotate(7deg);
+            -o-transform:rotate(7deg);
+            -ms-transform:rotate(7deg);
+            transform:rotate(7deg);
+            transform: rotate(7deg);   
         }
         
 
@@ -373,7 +390,7 @@
                     <div class="leaf_2 position-absolute" style="top: -50px;left: -100px;">
                         <img class="" src="./img/Leaf-11.png" style="width:250px;" alt="">
                     </div>
-                    <div class="leaf_3 position-absolute " style="top: -150px;left: -40px;">
+                    <div class="leaf_3 position-absolute " style="top: -150px;left: -40px; background-color: aqua;">
                         <img class="" src="./img/Leaf-6.png" style="width:380px;" alt="">
                     </div>
                 </div>
@@ -778,31 +795,54 @@
         },3000);
 
         // 葉子動!!!!!!!!!!!!!!!!!!!!!!!最後要原位/Y軸 
+        // $('.leaf_3').mousemove(function(event){
+            
+        //     let mousePositionX = event.pageX;
+        //     let mousePositionY = event.pageY;
+           
+        //     console.log('mousePositionX',mousePositionX);
+        //     console.log('mousePositionY',mousePositionY);
+        //     if( mousePositionX < mousePoitionNow){
+
+        //         $('.leaf_3').removeClass('animationRight');
+        //         $('.leaf_3').addClass('animationLeft');
+        //         $('.leaf_2').removeClass('animationLeft');
+        //         $('.leaf_2').addClass('animationRight');
+        //         $('.leaf_1').addClass('animation');
+        //         // console.log('mouseLeft');   
+        //     }else{
+        //         $('.leaf_3').removeClass('animationLeft');
+        //         $('.leaf_3').addClass('animationRight');
+        //         $('.leaf_2').removeClass('animationRight');
+        //         $('.leaf_2').addClass('animationLeft');
+        //         $('.leaf_1').removeClass('animation');
+        //         // console.log('mouseright');   
+        //     }
+        //     mousePoitionNow = mousePositionX;
+        //     // console.log('mousePoitionNow',mousePoitionNow);
+           
+        // })
+        
         $('.leaf_3').mousemove(function(event){
             
-            let mousePositionX = event.pageX;
-           
-            // console.log('mousePositionX',mousePositionX);
-            if( mousePositionX < mousePoitionNow){
+            let OffSetX = event.offsetX;
+            let OffSetY = event.offsetY;
+            
+            console.log('OffSetX', event.offsetX);
+            console.log('OffSetY', event.offsetY);
 
-                $('.leaf_3').removeClass('animationRight');
-                $('.leaf_3').addClass('animationLeft');
-                $('.leaf_2').removeClass('animationLeft');
-                $('.leaf_2').addClass('animationRight');
-                $('.leaf_1').addClass('animation');
-                // console.log('mouseLeft');   
-            }else{
-                $('.leaf_3').removeClass('animationLeft');
-                $('.leaf_3').addClass('animationRight');
-                $('.leaf_2').removeClass('animationRight');
-                $('.leaf_2').addClass('animationLeft');
-                $('.leaf_1').removeClass('animation');
-                // console.log('mouseright');   
+            if(OffSetX>190){
+                $('.leaf_3').css('transform','rotate(-26deg)');
             }
-            mousePoitionNow = mousePositionX;
-            // console.log('mousePoitionNow',mousePoitionNow);
-           
-        })
+            
+        });
+
+        
+
+
+
+
+
 
  
         // nav.hide!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!往上hide會故障
@@ -846,6 +886,19 @@
                 }
             });
         });
+        // let isMobile = $(window).width() < 768
+        
+        // if(isMobile){
+        //     $('#burger_nav').show();
+        //     $('#nav').addClass('padding');
+        //     $('.upper_link').hide();    
+        // }else{
+        //     $('#burger_nav').hide();
+        //     $('#nav').removeClass('padding');
+        //     $('.upper_link').show();
+        // }
+
+
         // 漢堡點a會自動收
         $('.navbar-nav a').on('click', function(){
             $('#navbarSupportedContent').removeClass('show');
@@ -969,6 +1022,16 @@
             }
 
         })
+
+        // 水果區葉子吹動
+        // setInterval(function(){
+        //     $('.leaf_9').toggleClass('animation');
+        // },3000)
+
+        
+
+
+
     </script>
 </body>
 </html>
